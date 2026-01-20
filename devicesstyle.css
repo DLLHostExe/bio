@@ -1,0 +1,174 @@
+/* Общие настройки */
+:root {
+    --bg-overlay: rgba(0, 0, 0, 0.6);
+    --card-bg: rgba(0, 0, 0, 0.5);
+    --card-bg-hover: rgba(0, 0, 0, 0.65);
+    --link-color: #4fc3f7;
+    --link-hover: #0099cc;
+    --header-border: #4fc3f7;
+    --text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: 
+        linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+        url("background.png") center/cover fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    line-height: 1.8;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Хедер и футер */
+.site-header {
+    text-align: center;
+    margin: 20px auto;
+    padding: 12px 0;
+    max-width: 900px;
+    width: 100%;
+    border-bottom: 1px solid var(--header-border);
+    position: relative;
+    z-index: 2;
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #aaa;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* Навигация */
+.site-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.site-nav a:hover {
+    background: rgba(79, 195, 247, 0.15);
+    text-decoration: underline;
+}
+
+/* Основное содержимое */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-content h1 {
+    text-align: center;
+    margin: 25px 0;
+    text-shadow: var(--text-shadow);
+    font-size: 2.2rem;
+}
+
+/* Сетка устройств */
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* Карточки устройств */
+.device-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+    background: var(--card-bg-hover);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.device-card h3 {
+    color: #80deea;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.device-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #eeeeee;
+    margin: 8px 0;
+    padding-left: 18px;
+}
+
+.device-card strong {
+    color: #bbdefb;
+}
+
+/* Ссылки внутри карточек */
+.device-card a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.device-card a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .device-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .site-nav a {
+        font-size: 16px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .device-card {
+        padding: 18px;
+    }
+    
+    .main-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
