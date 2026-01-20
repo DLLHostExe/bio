@@ -4,100 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мои устройства — DLLHostExe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="devicesstyle.css">
 </head>
 <body>
-    <!-- Хедер -->
-    <header style="
-        text-align: center;
-        margin: 20px auto;
-        padding: 12px 0;
-        width: 100%;
-        max-width: 900px;
-        border-bottom: 1px solid #4fc3f7;
-        position: relative;
-        z-index: 2;
-    ">
-        <nav>
-            <a href="index.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🏠 Главная</a>
-            <a href="tools.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🔧 Eblan рекомендует</a>
-            <a href="devices.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🛠️ Устройства</a>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="index.html" aria-label="На главную страницу">🏠 Главная</a>
+            <a href="devices.html" aria-current="page" aria-label="Страница устройств"> 💻 Устройства</a>
         </nav>
     </header>
 
-    <main style="max-width: 900px; margin: 0 auto; padding: 0 15px;">
+    <main class="main-content">
         <h1>🛠️ Мои устройства</h1>
-
         <div class="device-grid">
-            <div class="device-card">
-                <h3>🖥️Основной ПК</h3>
-                <p>Мой основной ПК. Использую на постоянке</p>
-                <p><strong>ОС:</strong> Windows 10(MAS), Windows 7(MAS), Arch Linux</p>
-                <p><strong>Процессор: </strong>AMD Ryzen 5 PRO 4650G</p>
-                <p><strong>Видеокарта: </strong>NVIDIA RTX 3060</p>
-                <p><strong>ОЗУ: </strong>16 GB</p>
-                <p><strong>Материнская плата: </strong>B550M AORUS Elite</p>
-                <p><strong>Блок питания: </strong>Cougar STE 500W</p>
-                <p><strong>1 диск: </strong>WD Green SATA M.2 SSD 240GB [WDS240G2G0B]</p>
-                <p><strong>2 диск: </strong>WD Blue HDD 1TB [WD10EZEX]</p>
-                <p><strong>3 диск: </strong>Apacer AS350 1TB]</p>
-                <p><strong>Клавиатура: </strong>Bloody 500N</p>
-                <p><strong>Мышь: </strong>X-710BK</p>
-                <p><strong>Наушники: </strong>Redragon ZEUS X Black</p>
-                <p><strong>Контроллер: </strong>Xbox 360 Wired Controller</p>
-                <p><strong>Веб-камера: </strong>Canyon CNS-CWC5</p>
-            </div>
+            <article class="device-card">
+                <h3>🖥️ Основной ПК</h3>
+                <p>Мой основной ПК. Использую на постоянной основе</p>
+                <p><strong>ОС:</strong> Windows 10 (MAS), Windows 7 (MAS), EndeavourOS (Arch)</p>
+                <p><strong>Процессор:</strong> 
+                    <a href="https://www.dns-shop.ru/product/cbe6e5b816f7ed20/processor-amd-ryzen-5-pro-4650g-oem/" target="_blank" rel="noopener noreferrer">AMD Ryzen 5 PRO 4650G</a>
+                </p>
+                <p><strong>Видеокарта:</strong>                   
+                    <a href="https://www.dns-shop.ru/product/12d0fed31355d9cb/videokarta-gigabyte-geforce-rtx-3060-windforce-oc-rev-20-gv-n3060wf2oc-12gd-20/" target="_blank" rel="noopener noreferrer">Nvidia Geforce RTX 3060</a>
+                </p>
+                <p><strong>ОЗУ:</strong>
+                    <a href="https://www.dns-shop.ru/product/e83182a8a3e33332/operativnaa-pamat-crucial-ballistix-white/" target="_blank" rel="noopener noreferrer">Crucial Ballistix White 16 GB</a> 
+                </p>
+                <p><strong>Материнская плата:</strong>
+                    <a href="https://www.dns-shop.ru/product/c44cd14acc801b80/materinskaa-plata-gigabyte-b550m-aorus-elite/" target="_blank" rel="noopener noreferrer">Gigabyte B550M AORUS Elite</a>       
+                </p>
+                <p><strong>Блок питания:</strong>
+                    <a href="https://www.dns-shop.ru/product/21f7031709fe3330/blok-pitania-cougar-ste-500w-cgr-st-500-cernyj/" target="_blank" rel="noopener noreferrer">Cougar STE 500W</a>
+                </p>
+                <p><strong>Диски:</strong></p>
+                <ul style="padding-left: 35px; margin: 8px 0;">
+                    <li><a href="https://www.dns-shop.ru/product/f47ce68a03f23330/240-gb-m2-sata-nakopitel-wd-green-wds240g2g0b/" target="_blank" rel="noopener noreferrer">WD Green SATA M.2 SSD 240GB</a></li>
+                    <li><a href="https://www.dns-shop.ru/product/f8ab2d6bbea4526f/1-tb-zestkij-disk-wd-blue-wd10ezex/" target="_blank" rel="noopener noreferrer">WD Blue HDD 1TB</a></li>
+                    <li><a href="https://www.dns-shop.ru/product/02d939ff43d23332/1000-gb-25-sata-nakopitel-apacer-as350-panther-95db2g0p100c/" target="_blank" rel="noopener noreferrer">Apacer AS350 1TB</a></li>
+                </ul>
+                <p><strong>Периферия:</strong></p>
+                <ul style="padding-left: 35px; margin: 8px 0;">
+                    <li>Клавиатура: <a href="https://www.dns-shop.ru/product/f9f20fcb22df1b80/klaviatura-provodnaa-a4tech-bloody-b500n/" target="_blank" rel="noopener noreferrer">Bloody 500N</a></li>
+                    <li>Мышь: <a href="https://www.dns-shop.ru/product/ecf260fd79546f9f/mys-provodnaa-a4tech-x-710bk-cernyj/" target="_blank" rel="noopener noreferrer">A4Tech X-710BK</a></li>
+                    <li>Наушники: <a href="https://www.dns-shop.ru/product/c555563d1bdcd0a4/provodnye-nausniki-redragon-zeus-x-rgb-cernyj-2024/" target="_blank" rel="noopener noreferrer">Redragon ZEUS X Black</a></li>
+                    <li>Контроллер: <a href="https://www.ozon.ru/product/geympad-xbox-360-controller-black-wired-provodnoy-chernyy-2944448357/?at=x6tPo6gpZClMEO02iK0jxA0co0g3MVSYovxozsxQVK83" target="_blank" rel="noopener noreferrer">Xbox 360 Wired Controller</a></li>
+                    <li>Веб-камера: <a href="https://www.dns-shop.ru/product/dde07ec2c85a1b80/veb-kamera-canyon-cns-cwc5/" target="_blank" rel="noopener noreferrer">Canyon CNS-CWC5</a></li>
+                </ul>
+            </article>
 
-            <div class="device-card">
-                <h3>💻 Ноутбук</h3>
-                <p>Старый и со сломанным корпусом экрана</p>
+            <article class="device-card">
+                <h3>💻 Ноутбук Lenovo</h3>
+                <p><strong>Модель:</strong>
+                <a href="//www.nix.ru/autocatalog/notebook_lenovo/Lenovo-IdeaPad-100-15IBY-80MJ00MJRK-Cel-N2840-2-250-WiFi-BT-Win10-156-182-kg_266956.html" target="_blank" rel="noopener noreferrer">Lenovo Ideapad 100-15IBY</a>
+                </p>
+                <p>Старый ноутбук со сломанным корпусом экрана</p>
                 <p><strong>Процессор:</strong> Intel Celeron N2840</p>
                 <p><strong>ОЗУ:</strong> 4 ГБ</p>
-                <p><strong>ОС:</strong> Windows 10 21H2 Enterprise IoT LTSC (активирован через MAS)</p>
-                <p><strong>Модель: </strong>Lenovo Ideapad 100-15IBY</p>
-                <p><strong>Используется: </strong>Для работы, записать образ системы на флешку на случай если с виндой на основном пк что-то случится.</p>
-            </div>
+                <p><strong>Хранилище:</strong> HDD 500 ГБ</p>
+                <p><strong>ОС:</strong> Windows 7 Professional (MAS)</p>
+            </article>
 
-            <div class="device-card">
-                <h3>📱Телефон Xiaomi POCO C65</h3>
-                <p>Основной телефон</p>
-                <p><strong>ОС:</strong> HyperOS 2.0.3.0 Global</p>
-                <p><strong>Android:</strong> 15</p>
-                <p><strong>ОЗУ:</strong> 16 GB(Физическая(8) и файл подкачки(8))</p>
+            <article class="device-card">
+                <h3>📱 Телефон Xiaomi POCO C65</h3>
+                 <p><strong>Модель:</strong>
+                <a href="https://www.dns-shop.ru/product/ae1827e177cbed20/674-smartfon-poco-c65-256-gb-sinij/" target="_blank" rel="noopener noreferrer">2310FPCA4G Gale</a>
+                </p>
+                <p>Основной телефон для повседневных задач</p>
+                <p><strong>ОС:</strong> HyperOS 1.0.7.0 Indonesia</p>
+                <p><strong>Android:</strong> 14</p>
+                <p><strong>ОЗУ:</strong> 16 GB (Физическая 8 GB + файл подкачки 8 GB)</p>
                 <p><strong>Внутренняя память:</strong> 256 ГБ</p>
                 <p><strong>Цвет:</strong> Синий</p>
-                <p><strong>Использую для:</strong> Повседневных задач</p>
                 <p><strong>Root:</strong> Да</p>
-            </div>
+            </article>
 
-            <div class="device-card">
-                <h3>📱Телефон Xiaomi Redmi 9</h3>
-                <p>Запасной телефон</p>
-                <p><strong>ОС:</strong> ProjectPixelage 2.2 UNOFFICIAL</p>
-                <p><strong>Android:</strong> 15</p>
-                <p><strong>ОЗУ:</strong> 3+4 GB</p>
+            <article class="device-card">
+                <h3>📱 Телефон Xiaomi Redmi 9</h3>
+                <p><strong>Модель: </strong>
+                <a href="https://www.dns-shop.ru/product/1f534782b68c3332/smartfon-xiaomi-redmi-9-332gb-65ltenfccam13mpx5020mahsunset-purple/" target="_blank" rel="noopener noreferrer">Lancelot M2004J19G</a>
+                </p>
+                <p>Второй телефон для экстренной связи</p>
+                <p><strong>ОС:</strong> CrDroid 12.1</p>
+                <p><strong>Android:</strong> 16</p>
+                <p><strong>ОЗУ:</strong> 3+4 GB (виртуальная)</p>
                 <p><strong>Внутренняя память:</strong> 32 GB</p>
                 <p><strong>Цвет:</strong> Фиолетовый</p>
-                <p><strong>Используется для:</strong> Летом - ничего, осенью либо сдать, либо списывать.</p>
                 <p><strong>Root:</strong> Да</p>
-            </div>
+            </article>
 
-            <div class="device-card full-width">
-                <h3>📱Телефон Huawei Y9 2018</h3>
-                <p>Запасной телефон</p>
+            <article class="device-card">
+                <h3>💻 Ноутбук Acer Aspire Lite 15</h3>
+                <p><strong>Модель:</strong> 
+                <a href="https://www.dns-shop.ru/product/934c96b315b1d9cb/156-noutbuk-acer-aspire-lite-al15-42p-r41d-serebristyj/" target="_blank" rel="noopener noreferrer">AL15-42P-R41D</a> 
+                </p>
+                <p>Новый ноутбук для повседневных задач</p>
+                <p><strong>Процессор:</strong> AMD Ryzen 5 7430U</p>
+                <p><strong>ОЗУ:</strong> 16 GB</p>
+                <p><strong>Хранилище:</strong> SSD 512 GB</p>
+                <p><strong>ОС:</strong> Windows 10 21H2 Enterprise IoT LTSC (MAS)</p>
+            </article>
+
+            <article class="device-card">
+                <h3>📱 Телефон Huawei Y9 2018</h3>
+                <p><strong>Модель: </strong>
+                <a href="https://www.mvideo.ru/products/smartfon-huawei-y9-2018-black-fla-lx1-30032651" target="_blank" rel="noopener noreferrer">FLA-LX1</a>
+                </p>
+                <p>Не используется</p>
                 <p><strong>ОС:</strong> EMUI 9.1.0</p>
                 <p><strong>Android:</strong> 9</p>
                 <p><strong>ОЗУ:</strong> 3 GB</p>
                 <p><strong>Внутренняя память:</strong> 32 ГБ</p>
-                <p><strong>Используется для:</strong> Тоже самое что и Redmi9, WiFi-мост</p>
                 <p><strong>Цвет:</strong> Темно-синий</p>
                 <p><strong>Root:</strong> Нет</p>
-            </div>
+            </article>
         </div>
     </main>
 
-    <footer style="text-align: center; margin-top: 50px; color: #aaa; font-size: 14px;">
-        Copyleft (c) 2009 DLLHostExe. Все права отобраны.
+    <footer class="site-footer">
+        Copyleft 2006 DLLHostExe. Все права отобраны.
     </footer>
 </body>
 </html>
