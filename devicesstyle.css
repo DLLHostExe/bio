@@ -22,6 +22,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     line-height: 1.8;
+    
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     padding: 20px;
 }
@@ -29,13 +32,22 @@ body {
 /* Хедер и футер */
 .site-header {
     text-align: center;
-    margin: 20px auto;
-    padding: 12px 0;
+    margin: 0 auto 20px auto; 
+    padding: 5px 0 12px 0;      
     max-width: 900px;
     width: 100%;
     border-bottom: 1px solid var(--header-border);
     position: relative;
     z-index: 2;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 .site-footer {
@@ -44,6 +56,9 @@ body {
     color: #aaa;
     font-size: 14px;
     padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 0 auto; 
 }
 
 /* Навигация */
@@ -66,11 +81,13 @@ body {
 
 .site-nav a:hover {
     background: rgba(79, 195, 247, 0.15);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-/* Основное содержимое */
+/* Основное содержимое*/
 .main-content {
+    flex: 1; 
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
@@ -85,8 +102,9 @@ body {
 
 /* Сетка устройств */
 .device-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
     margin: 30px 0;
 }
@@ -101,6 +119,8 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
+    flex: 0 1 calc(50% - 13px); 
+    min-width: 350px; 
 }
 
 .device-card:hover {
@@ -145,8 +165,9 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .device-grid {
-        grid-template-columns: 1fr;
+    .device-card {
+        flex: 1 1 100%;
+        min-width: 100%; 
     }
     
     .main-content h1 {
