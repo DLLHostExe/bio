@@ -6,37 +6,61 @@
     <title>DLLHostExe</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lang.css">
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="header-title">DLLHostExe</div>
+<div class="header-title">DLLHostExe</div>
         <nav>
-            <a href="index.html">🏠 Главная</a>
-            <a href="devices.html">🛠️ Устройства</a>
+            <a href="index.html" data-i18n="nav-home">🏠 Главная</a>
+            <a href="devices.html" data-i18n="nav-devices">🛠️ Устройства</a>
         </nav>
+        <div class="lang-switch">
+            <button id="lang-ru" class="active">🇷🇺</button>
+            <button id="lang-en">🇺🇸</button>
+        </div>
     </header>
 
     <main>
-        <h1>Добро пожаловать на сайт DLLHostExe</h1>
+        <h1 data-i18n="index-h1">Добро пожаловать на сайт DLLHostExe</h1>
 
         <section class="info">
-            <h2>Информация:</h2>
+            <div class="info-columns">
+                <div class="info-column">
+                    <h2 class="inline-headings">
+                        <span data-i18n="index-h2">Информация:</span>
+                    </h2>
+                    <details class="details-menu" data-toggle="contacts">
+                        <summary data-i18n="contact-summary">Контакты</summary>
+                        <div class="details-content" data-i18n="contacts-block">
+                            <p>
+                                <strong>Telegram:</strong> 
+                                <a href="https://t.me/dllhostexe" target="_blank">@dllhostexe</a> | 
+                                <a href="https://t.me/justanotherindianacc" target="_blank">@justanotherindianacc</a>
+                            </p>
+                            <p>
+                                <strong>Discord:</strong> <span>dllhost.exe</span>
+                            </p>
+                        </div>
+                    </details>
+                </div>
 
-            <div class="btn-container">
-                <details class="details-menu">
-                    <summary>Контакты</summary>
-                    
-                    <div class="details-content">
-                        <p>
-                            <strong>Telegram:</strong> 
-                            <a href="https://t.me/dllhostexe" target="_blank">@dllhostexe</a> | 
-                            <a href="https://t.me/justanotherindianacc" target="_blank">@justanotherindianacc</a>
-                        </p>
-                        <p>
-                            <strong>Discord:</strong> <span>dllhost.exe</span>
-                        </p>
-                    </div>
-                </details>
+                <div class="info-column">
+                    <h2 class="inline-headings">
+                        <span data-i18n="interests-h2">Интересы:</span>
+                    </h2>
+                    <details class="details-menu" id="interests-details">
+                        <summary data-i18n="interests-summary-open">Показать интересы</summary>
+                        <div class="details-content" data-i18n="interests">
+                            <p><span>Deltarune</span></p>
+                            <p><span>Minecraft</span></p>
+                            <p><span>(Вайб)кодинг</span></p>
+                            <p><span>Unstable SMP</span></p>
+                            <p><span>Компьютеры и ретро хрень</span></p>
+                        </div>
+                    </details>
+                </div>
             </div>
 
             <div class="certificate">
@@ -47,9 +71,21 @@
         </section>
     </main>
 
-    <footer>
+    <div class="footer-links">
+        <a class="channel-link" href="https://t.me/dllhost_exe" target="_blank" rel="noopener" data-tip="Телеграм канал автора">
+            <img src="telegram.svg" alt="Telegram">
+        </a>
+        <a class="channel-link" href="https://github.com/DLLHostExe" target="_blank" rel="noopener" data-tip="Гитхаб автора">
+            <img src="github.svg" alt="GitHub">
+        </a>
+    </div>
+
+    <footer data-i18n="footer">
         Copyleft (c) 2006 DLLHostExe. Все права отобраны.
     </footer>
+
+    <script src="lang.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function () { twemoji.parse(document.body); });</script>
 </body>
 </html>
 
