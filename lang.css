@@ -1,0 +1,37 @@
+/* Language switcher */
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0 0 0;
+}
+
+.lang-switch button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #aaa;
+    border: 1px solid rgba(79, 195, 247, 0.4);
+    padding: 4px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.lang-switch button.active {
+    background: #4fc3f7;
+    color: #121212;
+    border-color: #4fc3f7;
+}
+
+.lang-switch button:hover {
+    background: rgba(79, 195, 247, 0.2);
+}
+
+/* Twemoji swaps emoji for <img class="emoji">; this keeps them button-sized */
+.lang-switch button img[class*="emoji"] {
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: middle;
+}
